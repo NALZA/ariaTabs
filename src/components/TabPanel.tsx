@@ -15,8 +15,8 @@ export default function TabPanel({
 		<div
 			tabIndex={0}
 			role='tabpanel'
-			id={name + '-panel'}
-			aria-labelledby={name + 'tab'}
+			id={name + 'panel'}
+			aria-labelledby={name}
 			{...(selected ? {} : { hidden: true })}
 		>
 			<p>{text}</p>
