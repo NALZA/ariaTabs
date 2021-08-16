@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
 interface Props {
 	datakey: number;
 	selected: boolean;
@@ -12,8 +11,14 @@ export const Tab = ({ datakey, selected, name, deletable, onFocus }: Props) => {
 	const ref = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
-		if (selected) ref.current?.focus();
-	}, [selected]);
+		if (selected) {
+			ref.current?.focus();
+			ref.current?.scrollIntoView({
+				behavior: 'smooth',
+				inline: 'center',
+			});
+		}
+	}, [selected, name]);
 
 	return (
 		<button

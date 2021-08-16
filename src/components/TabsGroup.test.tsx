@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TabsGroup from './TabsGroup';
 import userEvent from '@testing-library/user-event';
+window.HTMLElement.prototype.scrollIntoView = jest.fn();
+
 const tabs = [
 	{
 		name: 'one',

@@ -44,7 +44,6 @@ export default function TabsGroup({ tabs }: TabsGroupProps): ReactElement {
 	const selectNewTab = (selection: number) => {
 		if (selection > tabs.length - 1) selection = 0;
 		if (selection < 0) selection = tabs.length - 1;
-		console.log(selection, selected);
 		//hack to make sure state updates when 0 is tied to delete on an array pf length 2
 		setstate(!state);
 		setSelected(selection);
