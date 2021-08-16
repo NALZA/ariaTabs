@@ -1,6 +1,7 @@
 import React, { ReactElement, useState, Fragment } from 'react';
 import { Tab } from './Tab';
 import TabPanel from './TabPanel';
+window.HTMLElement.prototype.scrollIntoView = jest.fn();
 
 export interface TabProps {
 	name: string;
